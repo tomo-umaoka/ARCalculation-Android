@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
         initArrowView()
         initRenderables()
 
-        arFragment!!.setOnTapArPlaneListener { hitResult: HitResult, plane: Plane?, motionEvent: MotionEvent? ->
+        arFragment!!.setOnTapArPlaneListener { hitResult: HitResult, _: Plane?, _: MotionEvent? ->
             if (distanceCardViewRenderable == null) return@setOnTapArPlaneListener
             tapDistanceFromGround(hitResult)
         }
@@ -261,7 +261,7 @@ class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
                     node.worldPosition.z
                 )
                 this.renderable = arrow1UpRenderable
-                this.setOnTapListener { hitTestResult, motionEvent ->
+                this.setOnTapListener { _, _ ->
                     node.worldPosition = Vector3(
                         node.worldPosition.x,
                         node.worldPosition.y+0.01f,
@@ -279,7 +279,7 @@ class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
                     node.worldPosition.z
                 )
                 this.renderable = arrow1DownRenderable
-                this.setOnTapListener { hitTestResult, motionEvent ->
+                this.setOnTapListener { _, _ ->
                     node.worldPosition = Vector3(
                         node.worldPosition.x,
                         node.worldPosition.y-0.01f,
@@ -297,7 +297,7 @@ class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
                     node.worldPosition.z
                 )
                 this.renderable = arrow10UpRenderable
-                this.setOnTapListener { hitTestResult, motionEvent ->
+                this.setOnTapListener { _, _ ->
                     node.worldPosition = Vector3(
                         node.worldPosition.x,
                         node.worldPosition.y+0.1f,
@@ -315,7 +315,7 @@ class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
                     node.worldPosition.z
                 )
                 this.renderable = arrow10DownRenderable
-                this.setOnTapListener { hitTestResult, motionEvent ->
+                this.setOnTapListener { _, _ ->
                     node.worldPosition = Vector3(
                         node.worldPosition.x,
                         node.worldPosition.y-0.1f,
@@ -341,7 +341,7 @@ class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
         }
         placedAnchorNodes.clear()
         midAnchors.clear()
-        for ((k,anchorNode) in midAnchorNodes){
+        for ((_, anchorNode) in midAnchorNodes){
             arFragment!!.arSceneView.scene.removeChild(anchorNode)
             anchorNode.isEnabled = false
             anchorNode.anchor!!.detach()
