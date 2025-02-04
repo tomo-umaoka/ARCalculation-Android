@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
         arrow1UpLinearLayout.orientation = LinearLayout.VERTICAL
         arrow1UpLinearLayout.gravity = Gravity.CENTER
         arrow1UpView = ImageView(this)
-        arrow1UpView.setImageResource(R.drawable.arrow_1up)
+        arrow1UpView.setImageResource(R.drawable.arrow_up)
         arrow1UpLinearLayout.addView(arrow1UpView,
             Constants.ARROW_VIEW_SIZE,
             Constants.ARROW_VIEW_SIZE)
@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
         arrow1DownLinearLayout.orientation = LinearLayout.VERTICAL
         arrow1DownLinearLayout.gravity = Gravity.CENTER
         arrow1DownView = ImageView(this)
-        arrow1DownView.setImageResource(R.drawable.arrow_1down)
+        arrow1DownView.setImageResource(R.drawable.arrow_down)
         arrow1DownLinearLayout.addView(arrow1DownView,
             Constants.ARROW_VIEW_SIZE,
             Constants.ARROW_VIEW_SIZE)
@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
         arrow10UpLinearLayout.orientation = LinearLayout.VERTICAL
         arrow10UpLinearLayout.gravity = Gravity.CENTER
         arrow10UpView = ImageView(this)
-        arrow10UpView.setImageResource(R.drawable.arrow_10up)
+        arrow10UpView.setImageResource(R.drawable.arrow_triangle_up)
         arrow10UpLinearLayout.addView(arrow10UpView,
             Constants.ARROW_VIEW_SIZE,
             Constants.ARROW_VIEW_SIZE)
@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
         arrow10DownLinearLayout.orientation = LinearLayout.VERTICAL
         arrow10DownLinearLayout.gravity = Gravity.CENTER
         arrow10DownView = ImageView(this)
-        arrow10DownView.setImageResource(R.drawable.arrow_10down)
+        arrow10DownView.setImageResource(R.drawable.arrow_triangle_down)
         arrow10DownLinearLayout.addView(arrow10DownView,
             Constants.ARROW_VIEW_SIZE,
             Constants.ARROW_VIEW_SIZE)
